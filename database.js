@@ -5,7 +5,6 @@ const cors = require('cors');
 
 app.use(cors());
 const bodyparser = require('body-parser');
-const { json } = require('express');
 
 app.use(bodyparser.json());
 var mysqlConnection = mysql.createConnection({
@@ -24,7 +23,7 @@ mysqlConnection.connect((err) => {
     }
 })
 
-app.listen(3000, () => console.log('Express server is running at port number 3000'));
+app.listen(3000, () => console.log('Express server is running at port number 3360'));
 
 app.get('/users', (req, res) => {
     mysqlConnection.query("SELECT * FROM userdetails", (err, rows, fields) => {
