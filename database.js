@@ -23,7 +23,7 @@ mysqlConnection.connect((err) => {
     }
 })
 
-app.listen(3000, () => console.log('Express server is running at port number 3360'));
+app.listen(3308, () => console.log('Express server is running at port number 3360'));
 
 app.get('/users', (req, res) => {
     mysqlConnection.query("SELECT * FROM userdetails", (err, rows, fields) => {
